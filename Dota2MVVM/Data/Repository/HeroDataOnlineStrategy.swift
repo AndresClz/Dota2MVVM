@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HeroRepository: HeroRepositoryProtocol {
+class HeroDataOnlineStrategy: HeroDataStrategy {
     // La URL base de la API de OpenDota
     private let baseURL = URL(string: "https://api.opendota.com/api")!
 

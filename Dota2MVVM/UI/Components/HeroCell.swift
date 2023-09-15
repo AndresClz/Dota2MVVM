@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct HeroCell: View {
+    let hero: Hero // Asegúrate de definir la propiedad `hero` que contendrá los datos de tu héroe
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // Aquí construye la apariencia de tu celda
+        HStack {
+            Image(systemName: "person.fill")
+                .resizable()
+                .frame(width: 50, height: 50)
+            Text(hero.localizedName)
+            // Agrega más detalles o elementos según sea necesario
+        }
+        .padding()
     }
 }
 
 struct HeroCell_Previews: PreviewProvider {
     static var previews: some View {
-        HeroCell()
+        HeroCell(hero: Hero(dto: HeroDTO(
+            id: 1,
+            name: "Antimage",
+            localizedName: "Anti-Mage",
+            primaryAttr: "agi",
+            attackType: "Melee",
+            roles: ["Carry", "Escape", "Nuker"],
+            img: "https://example.com/antimage.jpg",
+            icon: "https://example.com/antimage_icon.jpg"
+        )))
     }
 }

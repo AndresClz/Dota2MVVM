@@ -17,30 +17,30 @@ enum ViewState<T> {
 
 class HomeViewModel: ObservableObject {
     @Published var state: ViewState<[Hero]> = .loading
-    private let heroService: HeroServiceProtocol
+    private let heroService: HeroService
     
-    init(heroService: HeroServiceProtocol) {
+    init(heroService: HeroService) {
         self.heroService = heroService
     }
     
     func loadData() {
         state = .loading
-        heroService.getHeroes { [weak self] result in
+        heroService.getHeroes { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let heroes):
                     if heroes.count == 0 {
-                        self?.state = .empty
+                        self.state = .empty
                     }
-                    self?.state = .success(array: heroes)
+                    self.state = .success(array: heroes)
                 case .failure(let error):
                     switch error {
                     case .noInternetConnection:
-                        self?.state = .connectionError
+                        self.state = .connectionError
                     case .invalidResponse, .invalidURL:
-                        self?.state = .failure(error)
+                        self.state = .failure(error)
                     case .networkError(_):
-                        self?.state = .failure(error)
+                        self.state = .failure(error)
                     }
                 }
             }
@@ -49,8 +49,14 @@ class HomeViewModel: ObservableObject {
     
     static func createWithDefaultDependencies() -> HomeViewModel {
             let httpClient = HTTPClient.shared
-            let heroRepository = HeroRepository(httpClient: httpClient)
-            let heroService = HeroService(heroRepository: heroRepository)
+            let heroStrategy = HeroDataOnlineStrategy(httpClient: httpClient)
+            let heroService = HeroService(heroStrategy: heroStrategy)
             return HomeViewModel(heroService: heroService)
-        }
+    }
+    
+    static func createWithMockedDependencies() -> HomeViewModel {
+            let heroStrategy = HeroDataMockStrategy()
+            let heroService = HeroService(heroStrategy: heroStrategy)
+            return HomeViewModel(heroService: heroService)
+    }
 }

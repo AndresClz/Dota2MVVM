@@ -25,7 +25,12 @@ struct HomeView: View {
                 Text("No se han encontrado resultados")
             case .success(let heroes):
                 List(heroes, id: \.id) { hero in
-                    Text(hero.localizedName)
+                    VStack{
+                        Text(hero.localizedName)
+//                        if let urlString = hero.imageURL?.absoluteString {d
+//                            Text(urlString)
+//                        }
+                    }
                     // Agrega más detalles del héroe según sea necesario
                 }
             }

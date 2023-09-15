@@ -7,22 +7,22 @@
 
 import Foundation
 
-class HeroService: HeroServiceProtocol {
-    private let heroRepository: HeroRepositoryProtocol
+struct HeroService {
+    private let heroStrategy: HeroDataStrategy
 
-    init(heroRepository: HeroRepositoryProtocol) {
-        self.heroRepository = heroRepository
+    init(heroStrategy: HeroDataStrategy) {
+        self.heroStrategy = heroStrategy
     }
 
     // Método para obtener héroes y realizar la transformación
     func getHeroes(completion: @escaping (Result<[Hero], HTTPClientError>) -> Void) {
-        heroRepository.fetchHeroes { result in
+        heroStrategy.fetchHeroes { result in
             switch result {
             case .success(let heroDTOs):
                 // Realiza la transformación de DTO a modelo de dominio
-                let heroes = heroDTOs.map { dto in
-                    return Hero(dto: dto)
-                }
+//                let heroes = heroDTOs.map { dto in Hero(dto: dto) }
+                let heroes = heroDTOs.map({Hero(dto: $0)})
+
                 completion(.success(heroes))
             case .failure(let error):
                 completion(.failure(error))

@@ -13,7 +13,10 @@ struct Dota2MVVMApp: App {
     let homeViewModel = HomeViewModel.createWithDefaultDependencies()
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: homeViewModel)
+            NavigationView {
+                HomeView(viewModel: homeViewModel)
+            }
+            .navigationTitle("Heroes")
         }
     }
 }

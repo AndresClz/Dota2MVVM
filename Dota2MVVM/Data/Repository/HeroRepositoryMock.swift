@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HeroRepositoryMock: HeroRepositoryProtocol {
+class HeroDataMockStrategy: HeroDataStrategy {
     func fetchHeroes(completion: @escaping (Result<[HeroDTO], HTTPClientError>) -> Void) {
         // Simular una respuesta exitosa con datos de prueba (mock)
         let heroDTO1 = HeroDTO(

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HeroRepositoryProtocol {
+protocol HeroDataStrategy {
     func fetchHeroes(completion: @escaping (Result<[HeroDTO], HTTPClientError>) -> Void)
 }
