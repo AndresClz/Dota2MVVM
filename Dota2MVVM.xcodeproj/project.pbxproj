@@ -11,6 +11,8 @@
 		2E2B144C2AB3E92C00BF4B68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B144B2AB3E92C00BF4B68 /* ContentView.swift */; };
 		2E2B144E2AB3E92F00BF4B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2B144D2AB3E92F00BF4B68 /* Assets.xcassets */; };
 		2E2B14512AB3E92F00BF4B68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2B14502AB3E92F00BF4B68 /* Preview Assets.xcassets */; };
+		2E2B145F2AB3EDA800BF4B68 /* HeroDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */; };
+		2E2B14622AB3EF7000BF4B68 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14612AB3EF7000BF4B68 /* HeroModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2E2B144B2AB3E92C00BF4B68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E2B144D2AB3E92F00BF4B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E2B14502AB3E92F00BF4B68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTO.swift; sourceTree = "<group>"; };
+		2E2B14612AB3EF7000BF4B68 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		2E2B14482AB3E92C00BF4B68 /* Dota2MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				2E2B14592AB3EBBF00BF4B68 /* Data */,
+				2E2B14582AB3EBAD00BF4B68 /* Domain */,
+				2E2B14572AB3EB5400BF4B68 /* UI */,
 				2E2B14492AB3E92C00BF4B68 /* Dota2MVVMApp.swift */,
-				2E2B144B2AB3E92C00BF4B68 /* ContentView.swift */,
 				2E2B144D2AB3E92F00BF4B68 /* Assets.xcassets */,
 				2E2B144F2AB3E92F00BF4B68 /* Preview Content */,
 			);
@@ -65,6 +71,70 @@
 				2E2B14502AB3E92F00BF4B68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E2B14572AB3EB5400BF4B68 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B145B2AB3ED0E00BF4B68 /* Components */,
+				2E2B145A2AB3ED0700BF4B68 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2E2B14582AB3EBAD00BF4B68 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B14602AB3EED800BF4B68 /* DTO */,
+				2E2B145C2AB3ED4A00BF4B68 /* Models */,
+				2E2B145D2AB3ED6200BF4B68 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2E2B14592AB3EBBF00BF4B68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2E2B145A2AB3ED0700BF4B68 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B144B2AB3E92C00BF4B68 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2E2B145B2AB3ED0E00BF4B68 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E2B145C2AB3ED4A00BF4B68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B14612AB3EF7000BF4B68 /* HeroModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2E2B145D2AB3ED6200BF4B68 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2E2B14602AB3EED800BF4B68 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2B144C2AB3E92C00BF4B68 /* ContentView.swift in Sources */,
+				2E2B14622AB3EF7000BF4B68 /* HeroModel.swift in Sources */,
 				2E2B144A2AB3E92C00BF4B68 /* Dota2MVVMApp.swift in Sources */,
+				2E2B145F2AB3EDA800BF4B68 /* HeroDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
