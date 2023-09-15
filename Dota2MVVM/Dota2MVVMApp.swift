@@ -10,11 +10,10 @@ import SwiftUI
 @main
 struct Dota2MVVMApp: App {
     
-    let heroService: HeroServiceProtocol = HeroService(heroRepository: HeroRepository(httpClient: HTTPClient.shared))
-
+    let homeViewModel = HomeViewModel.createWithDefaultDependencies()
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: HomeViewModel(heroService: heroService))
+            HomeView(viewModel: homeViewModel)
         }
     }
 }

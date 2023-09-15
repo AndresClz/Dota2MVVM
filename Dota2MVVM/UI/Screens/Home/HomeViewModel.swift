@@ -46,4 +46,11 @@ class HomeViewModel: ObservableObject {
             }
         }
     }
+    
+    static func createWithDefaultDependencies() -> HomeViewModel {
+            let httpClient = HTTPClient.shared
+            let heroRepository = HeroRepository(httpClient: httpClient)
+            let heroService = HeroService(heroRepository: heroRepository)
+            return HomeViewModel(heroService: heroService)
+        }
 }

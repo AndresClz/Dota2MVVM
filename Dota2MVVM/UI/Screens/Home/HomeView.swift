@@ -42,9 +42,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel(
-            heroService: HeroService(
-                heroRepository: HeroRepository(
-                    httpClient: HTTPClient.shared))))
+        let homeViewModel = HomeViewModel.createWithDefaultDependencies()
+        HomeView(viewModel: homeViewModel)
     }
 }
