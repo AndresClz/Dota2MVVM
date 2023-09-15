@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+
+# Xcode
+*.swiftpm
+*.playground
+/xcuserdata/
+/*.xcodeproj/
+!/*.xcodeproj/project.pbxproj
+/*.xcworkspace/
+/*.xccheckout
+/*.xcscmblueprint
+
+# Swift Package Manager
+/.build/
+/DerivedData/
+/*.xcodeproj/
+/*.swiftpm/
+
+# CocoaPods
+/Pods/
+/Podfile.lock
+
+# Carthage
+/Carthage/Build/
+
+# Compiled source
+/*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
