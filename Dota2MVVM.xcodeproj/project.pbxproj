@@ -13,6 +13,8 @@
 		2E2B14512AB3E92F00BF4B68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2B14502AB3E92F00BF4B68 /* Preview Assets.xcassets */; };
 		2E2B145F2AB3EDA800BF4B68 /* HeroDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */; };
 		2E2B14622AB3EF7000BF4B68 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14612AB3EF7000BF4B68 /* HeroModel.swift */; };
+		2E2B14662AB3F46D00BF4B68 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14652AB3F46D00BF4B68 /* HTTPClient.swift */; };
+		2E2B14682AB3F4B600BF4B68 /* HeroRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14672AB3F4B600BF4B68 /* HeroRepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2E2B14502AB3E92F00BF4B68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTO.swift; sourceTree = "<group>"; };
 		2E2B14612AB3EF7000BF4B68 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		2E2B14652AB3F46D00BF4B68 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2E2B14672AB3F4B600BF4B68 /* HeroRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepositoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		2E2B14592AB3EBBF00BF4B68 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2E2B14642AB3F22100BF4B68 /* Repository */,
+				2E2B14632AB3F21700BF4B68 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -135,6 +141,22 @@
 				2E2B145E2AB3EDA800BF4B68 /* HeroDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		2E2B14632AB3F21700BF4B68 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B14652AB3F46D00BF4B68 /* HTTPClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2E2B14642AB3F22100BF4B68 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B14672AB3F4B600BF4B68 /* HeroRepositoryProtocol.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E2B144C2AB3E92C00BF4B68 /* ContentView.swift in Sources */,
+				2E2B14662AB3F46D00BF4B68 /* HTTPClient.swift in Sources */,
 				2E2B14622AB3EF7000BF4B68 /* HeroModel.swift in Sources */,
+				2E2B14682AB3F4B600BF4B68 /* HeroRepositoryProtocol.swift in Sources */,
 				2E2B144A2AB3E92C00BF4B68 /* Dota2MVVMApp.swift in Sources */,
 				2E2B145F2AB3EDA800BF4B68 /* HeroDTO.swift in Sources */,
 			);
