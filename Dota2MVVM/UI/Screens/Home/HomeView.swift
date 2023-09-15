@@ -34,6 +34,9 @@ struct HomeView: View {
             // Cuando aparece la vista, carga los datos
             viewModel.loadData()
         }
+        .refreshable {
+            viewModel.loadData()
+        }
     }
 }
 
