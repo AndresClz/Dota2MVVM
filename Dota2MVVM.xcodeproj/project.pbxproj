@@ -20,7 +20,6 @@
 		2E2B14702AB4024000BF4B68 /* HeroRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B146F2AB4024000BF4B68 /* HeroRepositoryMock.swift */; };
 		2E2B14722AB403D200BF4B68 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14712AB403D200BF4B68 /* HomeView.swift */; };
 		2E2B14752AB403E500BF4B68 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B14742AB403E500BF4B68 /* HomeViewModel.swift */; };
-		2EA5BD832AB4B1BB00CF0291 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA5BD822AB4B1BB00CF0291 /* HeroCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +37,6 @@
 		2E2B146F2AB4024000BF4B68 /* HeroRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRepositoryMock.swift; sourceTree = "<group>"; };
 		2E2B14712AB403D200BF4B68 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2E2B14742AB403E500BF4B68 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		2EA5BD822AB4B1BB00CF0291 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeroCell.swift; path = ../../../../../Dota2MVVM/Dota2MVVM/UI/Screens/Home/HeroCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 		2E2B14572AB3EB5400BF4B68 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2E2B145B2AB3ED0E00BF4B68 /* Components */,
 				2E2B145A2AB3ED0700BF4B68 /* Screens */,
 			);
 			path = UI;
@@ -123,14 +120,6 @@
 				2E2B14732AB403D600BF4B68 /* Home */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		2E2B145B2AB3ED0E00BF4B68 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				2EA5BD822AB4B1BB00CF0291 /* HeroCell.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		2E2B145C2AB3ED4A00BF4B68 /* Models */ = {
@@ -258,7 +247,6 @@
 				2E2B146A2AB4006900BF4B68 /* HeroRepository.swift in Sources */,
 				2E2B146E2AB400FD00BF4B68 /* HeroServiceProtocol.swift in Sources */,
 				2E2B14702AB4024000BF4B68 /* HeroRepositoryMock.swift in Sources */,
-				2EA5BD832AB4B1BB00CF0291 /* HeroCell.swift in Sources */,
 				2E2B14662AB3F46D00BF4B68 /* HTTPClient.swift in Sources */,
 				2E2B14722AB403D200BF4B68 /* HomeView.swift in Sources */,
 				2E2B146C2AB400F400BF4B68 /* HeroService.swift in Sources */,
